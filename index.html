@@ -5,104 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dropped</title>
 
+  <!-- Tipografía estilo Bold (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000000;
-      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #0d1117;
     }
+
+    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 25px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      background: #ffffff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
+
     nav img {
-      height: 40px;
+      height: 42px;
     }
+
     nav a {
-      margin-left: 20px;
+      margin-left: 25px;
       text-decoration: none;
       font-size: 18px;
-      color: #ffffff;
+      color: #0d1117;
+      font-weight: 600;
     }
+
     nav a:hover {
       color: #00e458;
     }
 
-    section {
-      padding: 50px 25px;
+    /* HERO - Título grande */
+    .section-title {
+      text-align: center;
+      font-size: 48px;
+      font-weight: 800;
+      margin-top: 70px;
+      margin-bottom: 40px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 800px;
-    }
-    @media (min-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    /* FILTROS (botones redondeados) */
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 50px;
     }
 
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 15px;
+    .filter-btn {
+      padding: 12px 26px;
+      border-radius: 30px;
+      border: 2px solid #e5e7eb;
+      background: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
       transition: 0.2s;
     }
-    .card:hover {
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+
+    .filter-btn:hover {
+      background: #f0f0f0;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #fff;
-      margin-top: 10px;
-      font-weight: bold;
+    .filter-btn.active {
+      background: #00e458;
+      border-color: #1b72ff;
+      color: white;
     }
-    .btn-ig { background: #000; }
-    .btn-wa { background: #00e458; }
-    .btn-ig:hover { background: #333; }
-    .btn-wa:hover { background: #00c84d; }
 
-    /* Modal base */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.65);
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .modal-content {
-      background: #fff;
-      padding: 20px;
-      width: 100%;
-      max-width: 500px;
-      border-radius: 15px;
+    /* MENSAJE VACÍO */
+    .empty-message {
       text-align: center;
+      margin-top: 80px;
+      font-size: 22px;
+      color: #4b5563;
     }
 
-    .close-btn {
-      margin-top: 15px;
-      display: inline-block;
-      padding: 10px 15px;
-      background: #000;
-      color: #fff;
-      border-radius: 8px;
-      cursor: pointer;
-    }
   </style>
 </head>
 
@@ -110,9 +99,9 @@
 
   <!-- NAVBAR -->
   <nav>
-    <div style="display:flex; align-items:center; gap:10px;">
+    <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo.png" alt="Logo Dropped" />
-      <strong style="font-size:22px;">Dropped</strong>
+      <strong style="font-size:24px;">Dropped</strong>
     </div>
     <div>
       <a href="#comprar">Comprar</a>
@@ -120,65 +109,41 @@
     </div>
   </nav>
 
-  <!-- COMPRAR -->
+  <!-- COMPRAR - NUEVO ESTILO TIPO BOLD -->
   <section id="comprar">
-    <h1 style="font-size:32px; font-weight:bold;">Comprar</h1>
-    <p>Selecciona qué quieres comprar:</p>
 
-    <div class="grid">
+    <h1 class="section-title">iPhones Disponibles</h1>
 
-      <div class="card">
-        <h2>iPhones</h2>
-        <ul>
-          <li><a href="#" onclick="openModal('11')">iPhone 11</a></li>
-          <li><a href="#" onclick="openModal('12')">iPhone 12</a></li>
-          <li><a href="#" onclick="openModal('13')">iPhone 13</a></li>
-          <li><a href="#" onclick="openModal('14')">iPhone 14</a></li>
-          <li><a href="#" onclick="openModal('15')">iPhone 15</a></li>
-          <li><a href="#" onclick="openModal('16')">iPhone 16</a></li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>MacBooks</h2>
-        <p>Modelos disponibles (pocos por ahora)</p>
-      </div>
-
+    <!-- Filtros estilo Bold -->
+    <div class="filters">
+      <button class="filter-btn active">Todos</button>
+      <button class="filter-btn">iPhone 11</button>
+      <button class="filter-btn">iPhone 12</button>
+      <button class="filter-btn">iPhone 13</button>
+      <button class="filter-btn">iPhone 14</button>
+      <button class="filter-btn">iPhone 15</button>
+      <button class="filter-btn">iPhone 16</button>
     </div>
+
+    <!-- Mensaje vacío como Bold -->
+    <p class="empty-message">No hay productos disponibles en este momento</p>
+
   </section>
+
 
   <!-- VENDER -->
-  <section id="vender" style="background:#ffffff;">
-    <h1 style="font-size:32px; font-weight:bold;">Vender</h1>
-    <p>¿Quieres vender tu iPhone o MacBook? Escríbenos:</p>
+  <section id="vender" style="padding: 60px 25px; text-align:center; background:#ffffff;">
+    <h1 style="font-size:40px; font-weight:800;">Vender</h1>
+    <p style="font-size:18px; color:#4b5563; max-width:600px; margin:auto;">
+      ¿Quieres vender tu iPhone o MacBook? Contáctanos directamente:
+    </p>
 
-    <a href="https://www.instagram.com/dropped.cl/" target="_blank" class="btn btn-ig">Enviar DM en Instagram</a><br>
-    <a href="https://wa.me/56959480660" target="_blank" class="btn btn-wa">Contactar por WhatsApp</a>
-  </section>
-
-
-  <!-- MODALES PARA CADA IPHONE -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h2 id="modal-title"></h2>
-      <img id="modal-img" src="" alt="iPhone" style="width:200px; margin: 20px 0;" />
-      <p>Fotos reales, precios y detalles van aquí.</p>
-      <span class="close-btn" onclick="closeModal()">Cerrar</span>
+    <div style="margin-top:25px; display:flex; flex-direction:column; gap:12px; align-items:center;">
+      <a href="https://www.instagram.com/dropped.cl/" target="_blank" class="btn btn-ig" style="background:#0d1117; padding:14px 30px; border-radius:14px; font-size:18px;">Enviar DM en Instagram</a>
+      <a href="https://wa.me/56959480660" target="_blank" class="btn btn-wa" style="background:#00e458; padding:14px 30px; border-radius:14px; font-size:18px;">Contactar por WhatsApp</a>
     </div>
-  </div>
-
-
-  <script>
-    function openModal(modelo) {
-      document.getElementById("modal-title").innerText = "iPhone " + modelo;
-      document.getElementById("modal-img").src = "iphone" + modelo + ".jpg";
-      document.getElementById("modal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-  </script>
+  </section>
 
 </body>
 </html>
+
