@@ -1,1 +1,112 @@
-hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dropped</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav img {
+      height: 40px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #000;
+    }
+    nav a:hover {
+      color: #00e458;
+    }
+    section {
+      padding: 50px 25px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .btn-ig { background: #000; }
+    .btn-wa { background: #00e458; }
+    .btn-ig:hover { background: #333; }
+    .btn-wa:hover { background: #00c84d; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="logo.png" alt="Logo Dropped">
+      <strong style="font-size:22px;">Dropped</strong>
+    </div>
+    <div>
+      <a href="#comprar">Comprar</a>
+      <a href="#vender">Vender</a>
+    </div>
+  </nav>
+
+  <!-- COMPRAR -->
+  <section id="comprar">
+    <h1 style="font-size:32px; font-weight:bold;">Comprar</h1>
+    <p>Selecciona qué quieres comprar:</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:800px;">
+
+      <div class="card">
+        <h2>iPhones</h2>
+        <ul>
+          <li>iPhone 11</li>
+          <li>iPhone 12</li>
+          <li>iPhone 13</li>
+          <li>iPhone 14</li>
+          <li>iPhone 15</li>
+          <li>iPhone 16</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>MacBooks</h2>
+        <p>Modelos disponibles (pocos por ahora)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VENDER -->
+  <section id="vender" style="background:#f5f5f5;">
+    <h1 style="font-size:32px; font-weight:bold;">Vender</h1>
+    <p>¿Quieres vender tu iPhone o MacBook? Escríbenos:</p>
+
+    <a href="https://www.instagram.com/dropped.cl/" target="_blank" class="btn btn-ig">Enviar DM en Instagram</a><br>
+    <a href="https://wa.me/56959480660" target="_blank" class="btn btn-wa">Contactar por WhatsApp</a>
+  </section>
+
+</body>
+</html>
+
