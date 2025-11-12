@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase, Product } from '../lib/supabase';
+import { Product, mockProducts } from '../data/products';
 import ProductCard from './ProductCard';
 
 interface ProductSectionProps {
@@ -22,20 +22,25 @@ export default function ProductSection({ category, title, sectionId }: ProductSe
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      let query = supabase
-        .from('products')
-        .select('*')
-        .eq('category', category)
-        .order('created_at', { ascending: false });
+      // Simulate network delay for better UX
+      await new Promise(resolve => setTimeout(resolve, 300));
 
+      // Get products from localStorage or use mockProducts as default
+      const storedProducts = localStorage.getItem('products');
+      const allProducts = storedProducts ? JSON.parse(storedProducts) : mockProducts;
+
+      // Filter products by category
+      let filtered = allProducts.filter((p: Product) => p.category === category);
+
+      // If iPhone and subcategory selected, filter by subcategory
       if (category === 'iphone' && selectedSubcategory) {
-        query = query.eq('subcategory', selectedSubcategory);
+        filtered = filtered.filter((p: Product) => p.subcategory === selectedSubcategory);
       }
 
-      const { data, error } = await query;
+      // Sort by created_at descending
+      filtered.sort((a: Product, b: Product) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
-      if (error) throw error;
-      setProducts(data || []);
+      setProducts(filtered);
     } catch (error) {
       console.error('Error fetching products:', error);
     } finally {

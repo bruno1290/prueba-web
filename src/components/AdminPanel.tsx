@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { X, Plus, Edit2, Trash2 } from 'lucide-react';
-import { supabase, Product } from '../lib/supabase';
+import { Product, mockProducts } from '../data/products';
 
 interface AdminPanelProps {
   isOpen: boolean;
@@ -35,13 +35,16 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
   const fetchProducts = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase
-        .from('products')
-        .select('*')
-        .order('created_at', { ascending: false });
+      // Get products from localStorage or use mockProducts as default
+      const storedProducts = localStorage.getItem('products');
+      const productsData = storedProducts ? JSON.parse(storedProducts) : mockProducts;
 
-      if (error) throw error;
-      setProducts(data || []);
+      // Sort by created_at descending
+      const sorted = [...productsData].sort((a, b) =>
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      );
+
+      setProducts(sorted);
     } catch (error) {
       console.error('Error fetching products:', error);
       alert('Error al cargar productos');
@@ -55,6 +58,9 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
     setLoading(true);
 
     try {
+      const storedProducts = localStorage.getItem('products');
+      const currentProducts = storedProducts ? JSON.parse(storedProducts) : mockProducts;
+
       const productData = {
         name: formData.name,
         category: formData.category,
@@ -69,19 +75,24 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
       };
 
       if (editingProduct) {
-        const { error } = await supabase
-          .from('products')
-          .update({ ...productData, updated_at: new Date().toISOString() })
-          .eq('id', editingProduct.id);
-
-        if (error) throw error;
+        // Update existing product
+        const updatedProducts = currentProducts.map((p: Product) =>
+          p.id === editingProduct.id
+            ? { ...productData, id: editingProduct.id, created_at: editingProduct.created_at, updated_at: new Date().toISOString() }
+            : p
+        );
+        localStorage.setItem('products', JSON.stringify(updatedProducts));
         alert('Producto actualizado exitosamente');
       } else {
-        const { error } = await supabase
-          .from('products')
-          .insert([productData]);
-
-        if (error) throw error;
+        // Create new product
+        const newProduct = {
+          ...productData,
+          id: Date.now().toString(),
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        };
+        const newProducts = [...currentProducts, newProduct];
+        localStorage.setItem('products', JSON.stringify(newProducts));
         alert('Producto creado exitosamente');
       }
 
@@ -117,12 +128,12 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
 
     setLoading(true);
     try {
-      const { error } = await supabase
-        .from('products')
-        .delete()
-        .eq('id', id);
+      const storedProducts = localStorage.getItem('products');
+      const currentProducts = storedProducts ? JSON.parse(storedProducts) : mockProducts;
 
-      if (error) throw error;
+      const filteredProducts = currentProducts.filter((p: Product) => p.id !== id);
+      localStorage.setItem('products', JSON.stringify(filteredProducts));
+
       alert('Producto eliminado exitosamente');
       fetchProducts();
     } catch (error) {
