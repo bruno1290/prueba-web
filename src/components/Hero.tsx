@@ -10,11 +10,6 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
-          <img
-            src="/5.png"
-            alt="Dropped"
-            className="h-24 w-auto mx-auto mb-8 animate-fade-in"
-          />
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
             <button
               onClick={() => scrollToSection('iphones')}

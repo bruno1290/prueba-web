@@ -40,7 +40,7 @@ export default function ArrowGuide() {
       const pathData = [
         `M ${startX} ${startY}`,
         `C ${startX + 60} ${startY - 30}, ${startX + horizontalOffset * 0.35} ${startY + 10}, ${anchorX} ${startY + 80}`,
-        `L ${anchorX} ${anchorBottomY}`,
+        `S ${anchorX} ${startY + 180}, ${anchorX} ${anchorBottomY}`,
         `Q ${anchorX} ${endY - 60}, ${endX + 90} ${endY - 35}`,
         `T ${endX} ${endY}`
       ].join(' ');
