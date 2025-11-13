@@ -1,0 +1,8 @@
+<svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Logo Dropped</title>
+  <rect width="180" height="60" rx="12" fill="#0f0f0f" />
+  <text x="38" y="39" fill="#ffffff" font-family="'Montserrat', 'Poppins', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="0">Dropped</text>
+  <path d="M30 18h90c10 0 18 8 18 18v15" fill="none" stroke="#00D563" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M138 51h-32" fill="none" stroke="#00D563" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M112 63l-16-12 16-12" fill="none" stroke="#00D563" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

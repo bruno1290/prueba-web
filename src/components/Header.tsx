@@ -17,11 +17,15 @@ export default function Header({ onAdminClick }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f0f0f] shadow-sm text-white">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src="/5.png" alt="Dropped Logo" className="h-8 w-auto" />
+            <img
+              src="/dropped-logo.svg"
+              alt="Dropped Logo"
+              className="h-10 w-auto"
+            />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
