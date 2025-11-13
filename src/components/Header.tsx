@@ -17,7 +17,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f0f0f] shadow-sm text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1f1f1d] shadow-sm text-white">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
