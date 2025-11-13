@@ -16,9 +16,6 @@ export default function Hero() {
             className="h-24 w-auto mx-auto mb-8 animate-fade-in"
           />
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
-            <span className="text-sm uppercase tracking-[0.35em] text-gray-500">
-              Compra
-            </span>
             <button
               onClick={() => scrollToSection('iphones')}
               className="px-8 py-3 rounded-full text-lg font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all"
