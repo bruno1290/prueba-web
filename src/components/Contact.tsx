@@ -4,7 +4,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+        <h2
+          id="contact-heading"
+          className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12"
+        >
           Contáctanos
         </h2>
 

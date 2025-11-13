@@ -5,12 +5,14 @@ import ProductSection from './components/ProductSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+import ArrowGuide from './components/ArrowGuide';
 
 function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
+      <ArrowGuide />
       <Header onAdminClick={() => setIsAdminOpen(true)} />
       <Hero />
       <ProductSection

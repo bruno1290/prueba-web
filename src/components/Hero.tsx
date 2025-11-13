@@ -23,6 +23,7 @@ export default function Hero() {
               Compra
             </button>
             <button
+              id="hero-sell-button"
               onClick={() => scrollToSection('contact')}
               className="px-12 py-4 rounded-full text-2xl font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all min-w-[190px]"
             >
