@@ -18,18 +18,18 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
             <button
               onClick={() => scrollToSection('iphones')}
-              className="px-8 py-3 rounded-full text-lg font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all"
+              className="px-12 py-4 rounded-full text-2xl font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all min-w-[190px]"
             >
               Compra
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-16 py-7 rounded-full text-lg font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all"
+              className="px-12 py-4 rounded-full text-2xl font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all min-w-[190px]"
             >
               Vende
             </button>
           </div>
-          <p className="text-4xl md:text-5xl font-bold text-gray-900">
+          <p className="text-2xl md:text-3xl font-semibold text-gray-900">
             Seguro.
           </p>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
