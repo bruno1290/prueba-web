@@ -10,11 +10,12 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
-          <p className="text-2xl md:text-3xl font-semibold text-gray-900">Dropped</p>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
+          <p className="text-4xl md:text-5xl font-bold text-[#00D563]">Compra y Vende</p>
+          <p className="text-2xl md:text-3xl font-semibold text-gray-900 mt-4">Seguro</p>
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-6">
             No te arriesgues en Marketplace.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => scrollToSection('iphones')}
               className="px-12 py-4 rounded-full text-2xl font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all min-w-[190px]"
