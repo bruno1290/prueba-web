@@ -20,7 +20,7 @@ export default function Hero() {
         <span className="block mt-2 text-header">Seguro.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-        No te arriesgues en Marketplace.
+        No te arriesgues en Marketplace
         <span className="block mt-2 font-medium">Desde el iPhone 11 y MacBooks desde 2020.</span>
         </p>
         <button
