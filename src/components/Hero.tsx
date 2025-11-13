@@ -1,16 +1,12 @@
 export default function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center min-h-[220px] flex flex-col items-center justify-center">
-          {/* Espacio reservado para explorar nuevo hero */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#00D563]">Compra y Vende</h1>
+          <p className="text-3xl md:text-4xl font-semibold text-gray-900 mt-4">
+            Dispositivos Apple
+          </p>
         </div>
 
         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto text-center">
