@@ -1,6 +1,6 @@
 export default function Hero() {
-  const scrollToProducts = () => {
-    const element = document.getElementById('iphones');
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -15,16 +15,32 @@ export default function Hero() {
             alt="Dropped"
             className="h-24 w-auto mx-auto mb-8 animate-fade-in"
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-[#00D563]">Compra y Vende</span>
-            <span className="block mt-2 font-bold text-gray-700">Seguro.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+            <span className="text-sm uppercase tracking-[0.35em] text-gray-500">
+              Compra
+            </span>
+            <button
+              onClick={() => scrollToSection('iphones')}
+              className="px-8 py-3 rounded-full text-lg font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all"
+            >
+              Compra
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-3 rounded-full text-lg font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all"
+            >
+              Vende
+            </button>
+          </div>
+          <p className="text-4xl md:text-5xl font-bold text-gray-900">
+            Seguro.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
             No te arriesgues en Marketplace.
             <span className="block mt-2 font-medium">Desde el iPhone 11 y MacBooks desde 2020.</span>
           </p>
           <button
-            onClick={scrollToProducts}
+            onClick={() => scrollToSection('iphones')}
             className="bg-[#00D563] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#00c056] transition-all transform hover:scale-105 shadow-lg"
           >
             Ver Productos
