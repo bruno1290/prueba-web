@@ -16,8 +16,8 @@ export default function Hero() {
             className="h-24 w-auto mx-auto mb-8 animate-fade-in"
           />
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Vende tu Apple
-            <span className="block text-[#00D563] mt-2">Seguro y Fácil</span>
+            <span className="text-[#00D563]">Compra y Vende</span>
+            <span className="block text-gray-900 font-bold mt-2">Seguro y Fácil</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
             Compramos iPhones y MacBooks. No te arriesgues en Marketplace.
