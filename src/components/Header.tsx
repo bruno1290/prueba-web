@@ -17,7 +17,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm text-white">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -27,25 +27,25 @@ export default function Header({ onAdminClick }: HeaderProps) {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('iphones')}
-              className="text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="text-white hover:text-[#00D563] transition-colors font-medium"
             >
               iPhones
             </button>
             <button
               onClick={() => scrollToSection('macbooks')}
-              className="text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="text-white hover:text-[#00D563] transition-colors font-medium"
             >
               MacBooks
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="text-white hover:text-[#00D563] transition-colors font-medium"
             >
               Contacto
             </button>
             <button
               onClick={onAdminClick}
-              className="text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="text-white hover:text-[#00D563] transition-colors font-medium"
             >
               Admin
             </button>
@@ -53,13 +53,13 @@ export default function Header({ onAdminClick }: HeaderProps) {
               href="https://www.instagram.com/dropped.cl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-[#00D563] transition-colors"
+              className="text-white hover:text-[#00D563] transition-colors"
             >
               <Instagram className="h-5 w-5" />
             </a>
             <a
               href="tel:+56959480660"
-              className="text-gray-700 hover:text-[#00D563] transition-colors"
+              className="text-white hover:text-[#00D563] transition-colors"
             >
               <Phone className="h-5 w-5" />
             </a>
@@ -67,7 +67,7 @@ export default function Header({ onAdminClick }: HeaderProps) {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-700"
+            className="md:hidden text-white"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -77,25 +77,25 @@ export default function Header({ onAdminClick }: HeaderProps) {
           <div className="md:hidden py-4 space-y-3">
             <button
               onClick={() => scrollToSection('iphones')}
-              className="block w-full text-left text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
             >
               iPhones
             </button>
             <button
               onClick={() => scrollToSection('macbooks')}
-              className="block w-full text-left text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
             >
               MacBooks
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
             >
               Contacto
             </button>
             <button
               onClick={onAdminClick}
-              className="block w-full text-left text-gray-700 hover:text-[#00D563] transition-colors font-medium"
+              className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
             >
               Admin
             </button>
