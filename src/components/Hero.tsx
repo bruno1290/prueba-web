@@ -17,10 +17,10 @@ export default function Hero() {
         />
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
         <span className="text-[#00D563]">Compra y Vende</span>
-        <span className="block mt-2 text-header">Seguro y Fácil</span>
+        <span className="block mt-2 text-header">Seguro.</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-        Compramos iPhones y MacBooks. No te arriesgues en Marketplace.
+        No te arriesgues en Marketplace.
         <span className="block mt-2 font-medium">Desde el iPhone 11 y MacBooks desde 2020.</span>
         </p>
         <button
@@ -38,24 +38,24 @@ export default function Hero() {
           <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Proceso Seguro</h3>
-        <p className="text-gray-600">
-          Transacciones verificadas y protegidas en cada paso
-        </p>
-        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-
+            <p className="text-gray-600">
+              Transacciones verificadas y protegidas en cada paso
+            </p>
+          </div>
 
-        <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
-        <div className="w-16 h-16 bg-[#00D563] rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
+          <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-[#00D563] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Precios Justos</h3>
+            <p className="text-gray-600">
+              Cotizaciones transparentes al instante
+            </p>
+          </div>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Precios Justos</h3>
-        <p className="text-gray-600">
-          Cotizaciones transparentes al instante
-        </p>
-        </div>
-      </div>
       </div>
     </section>
   );
