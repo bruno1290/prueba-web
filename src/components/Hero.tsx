@@ -24,12 +24,9 @@ export default function Hero() {
               Vende
             </button>
           </div>
-          <p className="text-2xl md:text-3xl font-semibold text-gray-900">
-            Seguro.
-          </p>
+          <p className="text-2xl md:text-3xl font-semibold text-gray-900">Seguro.</p>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
             No te arriesgues en Marketplace.
-            <span className="block mt-2 font-medium">Desde el iPhone 11 y MacBooks desde 2020.</span>
           </p>
           <button
             onClick={() => scrollToSection('iphones')}
@@ -39,7 +36,7 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
             <div className="w-16 h-16 bg-[#00D563] rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -48,7 +45,23 @@ export default function Hero() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Proceso Seguro</h3>
             <p className="text-gray-600">
-              Transacciones verificadas y protegidas en cada paso
+                100% confiable.
+            </p>
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="w-16 h-16 bg-[#00D563] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 6.293a1 1 0 010 1.414l-6.25 6.25a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9.75 11.586l5.543-5.543a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">+80 Clientes</h3>
+            <p className="text-gray-600">
+              Personas que ya compraron o vendieron con nosotros
             </p>
           </div>
 
@@ -64,7 +77,6 @@ export default function Hero() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Precios Justos</h3>
             <p className="text-gray-600">
-              Cotizaciones transparentes al instante
             </p>
           </div>
         </div>
