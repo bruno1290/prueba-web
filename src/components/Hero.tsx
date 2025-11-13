@@ -24,7 +24,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-3 rounded-full text-lg font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all"
+              className="px-16 py-7 rounded-full text-lg font-semibold bg-[#00D563] text-white hover:bg-[#00c056] transition-all"
             >
               Vende
             </button>
