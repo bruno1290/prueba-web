@@ -17,7 +17,7 @@ export default function Hero() {
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-[#00D563]">Compra y Vende</span>
-            <span className="block mt-2 font-bold text-gray-700">Seguro y Fácil</span>
+            <span className="block mt-2 font-bold text-gray-700">Seguro.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
             No te arriesgues en Marketplace.
