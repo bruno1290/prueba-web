@@ -7,9 +7,15 @@ export default function Hero() {
   };
 
   return (
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-6">
-            No te arriesgues en Marketplace.
-          </p>
+    <section className="relative min-h-screen flex items-center justify-center bg-white pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center min-h-[220px] flex flex-col items-center justify-center">
+          {/* Espacio reservado para explorar nuevo hero */}
+        </div>
+
+        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto text-center">
+          No te arriesgues en Marketplace.
+        </p>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
@@ -19,9 +25,7 @@ export default function Hero() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Proceso Seguro</h3>
-            <p className="text-gray-600">
-                100% confiable.
-            </p>
+            <p className="text-gray-600">Validamos cada equipo para que sea 100% confiable.</p>
           </div>
 
           <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
@@ -35,9 +39,7 @@ export default function Hero() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">+80 Clientes</h3>
-            <p className="text-gray-600">
-              Personas que ya compraron o vendieron con nosotros
-            </p>
+            <p className="text-gray-600">Personas que ya compraron o vendieron con nosotros.</p>
           </div>
 
           <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow">
@@ -51,8 +53,7 @@ export default function Hero() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Precios Justos</h3>
-            <p className="text-gray-600">
-            </p>
+            <p className="text-gray-600">Cotizaciones transparentes al instante.</p>
           </div>
         </div>
       </div>
