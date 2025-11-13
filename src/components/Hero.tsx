@@ -10,7 +10,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center bg-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+          <p className="text-2xl md:text-3xl font-semibold text-gray-900">Dropped</p>
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
+            No te arriesgues en Marketplace.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
             <button
               onClick={() => scrollToSection('iphones')}
               className="px-12 py-4 rounded-full text-2xl font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-all min-w-[190px]"
@@ -24,16 +28,6 @@ export default function Hero() {
               Vende
             </button>
           </div>
-          <p className="text-2xl md:text-3xl font-semibold text-gray-900">Seguro.</p>
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto mt-8">
-            No te arriesgues en Marketplace.
-          </p>
-          <button
-            onClick={() => scrollToSection('iphones')}
-            className="bg-[#00D563] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#00c056] transition-all transform hover:scale-105 shadow-lg"
-          >
-            Ver Productos
-          </button>
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
