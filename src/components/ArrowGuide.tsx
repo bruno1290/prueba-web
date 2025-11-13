@@ -31,20 +31,31 @@ export default function ArrowGuide() {
       const endX = endRect.left + endRect.width / 2;
       const endY = endRect.top;
 
-      const straightDistance = endY - startY;
-      const bendDistance = Math.max(120, straightDistance * 0.4);
-      const bendStartY = startY + Math.min(bendDistance, 320);
-      const bendEndY = Math.max(bendStartY + 60, endY - 80);
+      const viewportWidth = window.innerWidth;
+      const horizontalOffset = Math.max(160, viewportWidth * 0.18);
+      const anchorX = startX + horizontalOffset;
+      const verticalHold = Math.max(120, (endY - startY) * 0.5);
+      const anchorBottomY = Math.max(startY + verticalHold, endY - 140);
 
       const pathData = [
         `M ${startX} ${startY}`,
-        `C ${startX} ${startY + 40}, ${startX} ${startY + 80}, ${startX} ${bendStartY}`,
-        `L ${startX} ${bendEndY}`,
-        `Q ${startX} ${endY - 40}, ${endX} ${endY - 40}`,
-        `T ${endX} ${endY - 10}`
+        `C ${startX + 60} ${startY - 30}, ${startX + horizontalOffset * 0.35} ${startY + 10}, ${anchorX} ${startY + 80}`,
+        `L ${anchorX} ${anchorBottomY}`,
+        `Q ${anchorX} ${endY - 60}, ${endX + 90} ${endY - 35}`,
+        `T ${endX} ${endY}`
       ].join(' ');
 
-      const headPath = `M ${endX - 16} ${endY - 30} L ${endX} ${endY} L ${endX + 16} ${endY - 30} Z`;
+      const headWidth = 34;
+      const headHeight = 26;
+      const headPath = [
+        `M ${endX + headWidth} ${endY - headHeight / 2}`,
+        `Q ${endX + headWidth - 10} ${endY}, ${endX + headWidth} ${endY + headHeight / 2}`,
+        `Q ${endX + headWidth - 6} ${endY + headHeight / 2 + 4}, ${endX + headWidth - 18} ${endY + headHeight / 2}`,
+        `L ${endX} ${endY}`,
+        `L ${endX + headWidth - 18} ${endY - headHeight / 2}`,
+        `Q ${endX + headWidth - 6} ${endY - headHeight / 2 - 4}, ${endX + headWidth} ${endY - headHeight / 2}`,
+        'Z'
+      ].join(' ');
 
       setPaths({ line: pathData, head: headPath, visible: true });
     };
@@ -82,7 +93,7 @@ export default function ArrowGuide() {
       <path
         d={paths.line}
         stroke={GREEN}
-        strokeWidth={6}
+        strokeWidth={10}
         fill="none"
         strokeLinecap="round"
         strokeLinejoin="round"
