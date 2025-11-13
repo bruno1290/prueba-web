@@ -1,11 +1,7 @@
-import { Menu, Instagram, Phone } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
-interface HeaderProps {
-  onAdminClick: () => void;
-}
-
-export default function Header({ onAdminClick }: HeaderProps) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -43,26 +39,6 @@ export default function Header({ onAdminClick }: HeaderProps) {
             >
               Contacto
             </button>
-            <button
-              onClick={onAdminClick}
-              className="text-white hover:text-[#00D563] transition-colors font-medium"
-            >
-              Admin
-            </button>
-            <a
-              href="https://www.instagram.com/dropped.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#00D563] transition-colors"
-            >
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a
-              href="tel:+56959480660"
-              className="text-white hover:text-[#00D563] transition-colors"
-            >
-              <Phone className="h-5 w-5" />
-            </a>
           </div>
 
           <button
@@ -92,12 +68,6 @@ export default function Header({ onAdminClick }: HeaderProps) {
               className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
             >
               Contacto
-            </button>
-            <button
-              onClick={onAdminClick}
-              className="block w-full text-left text-white hover:text-[#00D563] transition-colors font-medium"
-            >
-              Admin
             </button>
           </div>
         )}

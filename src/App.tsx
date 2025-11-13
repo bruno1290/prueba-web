@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onAdminClick={() => setIsAdminOpen(true)} />
+      <Header />
       <Hero />
       <ProductSection
         category="iphone"
