@@ -6,6 +6,7 @@ export interface Product {
   price: number;
   description: string;
   storage: string;
+  battery?: string;
   color: string;
   condition: string;
   image_url: string;
@@ -21,8 +22,8 @@ export const mockProducts: Product[] = [
     name: 'iPhone 14 Pro Max',
     category: 'iphone',
     subcategory: '14',
-    price: 550.000,
-    description: 'Impecable estado. Como nuevo. Sin piezas cambiadas Uso adulto, muy bien cuidado' + 'Incluye: Cable original nuevo. Caja y Carcasa MagSafe',
+    price: 550000,
+    description: 'Impecable estado. Como nuevo. Sin piezas cambiadas Uso adulto, muy bien cuidado' + ' Incluye: Cable original nuevo. Caja y Carcasa MagSafe',
     storage: '128GB',
     battery: '87%',
     color: 'Titanio Natural',

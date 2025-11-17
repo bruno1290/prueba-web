@@ -1,5 +1,5 @@
 import { Instagram } from 'lucide-react';
-import { Product } from '../lib/supabase';
+import { Product } from '../data/products';
 
 interface ProductCardProps {
   product: Product;
@@ -45,6 +45,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
         {product.storage && (
           <p className="text-gray-600 mb-1">{product.storage}</p>
+        )}
+        {product.battery && (
+          <p className="text-gray-600 mb-1">Batería: {product.battery}</p>
         )}
         {product.color && (
           <p className="text-gray-600 mb-2">{product.color}</p>

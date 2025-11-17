@@ -20,6 +20,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
     price: '',
     description: '',
     storage: '',
+    battery: '',
     color: '',
     condition: 'Como nuevo',
     image_url: '',
@@ -68,6 +69,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
         price: parseFloat(formData.price),
         description: formData.description,
         storage: formData.storage,
+        battery: formData.battery,
         color: formData.color,
         condition: formData.condition,
         image_url: formData.image_url,
@@ -115,6 +117,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
       price: product.price.toString(),
       description: product.description,
       storage: product.storage,
+      battery: product.battery || '',
       color: product.color,
       condition: product.condition,
       image_url: product.image_url,
@@ -152,6 +155,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
       price: '',
       description: '',
       storage: '',
+      battery: '',
       color: '',
       condition: 'Como nuevo',
       image_url: '',
@@ -261,6 +265,19 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
                       placeholder="256GB"
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Batería
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.battery}
+                    onChange={(e) => setFormData({ ...formData, battery: e.target.value })}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00D563] focus:border-transparent"
+                    placeholder="Ej: 87%"
+                  />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -374,7 +391,7 @@ export default function AdminPanel({ isOpen, onClose }: AdminPanelProps) {
                         <div className="flex-1">
                           <h4 className="font-bold text-gray-900">{product.name}</h4>
                           <p className="text-sm text-gray-600">
-                            {product.storage} {product.color}
+                            {product.storage} {product.color} {product.battery ? `· Batería ${product.battery}` : ''}
                           </p>
                           <p className="text-lg font-bold text-[#00D563] mt-1">
                             ${product.price.toLocaleString('es-CL')}
