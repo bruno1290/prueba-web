@@ -18,6 +18,22 @@ export const mockProducts: Product[] = [
   // iPhones
   {
     id: '1',
+    name: 'iPhone 14 Pro Max',
+    category: 'iphone',
+    subcategory: '14',
+    price: 550.000,
+    description: 'Impecable estado. Como nuevo. Sin piezas cambiadas Uso adulto, muy bien cuidado' + 'Incluye: Cable original nuevo. Caja y Carcasa MagSafe',
+    storage: '128GB',
+    battery: '87%',
+    color: 'Titanio Natural',
+    condition: 'Como nuevo',
+    image_url: '/images/iphones/iphone14_pro.png',
+    available: true,
+    created_at: '2024-01-15T10:00:00Z',
+    updated_at: '2024-01-15T10:00:00Z',
+  },
+  {
+    id: '2',
     name: 'iPhone 14 Pro',
     category: 'iphone',
     subcategory: '14',
@@ -31,8 +47,26 @@ export const mockProducts: Product[] = [
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  // {
   //   id: '2',
   //   name: 'iPhone 14 Pro Max',
   //   category: 'iphone',
