@@ -175,21 +175,6 @@ export const mockProducts: Product[] = [
   //   updated_at: '2024-01-11T10:00:00Z',
   // },
   // MacBooks
-  {
-    id: '7',
-    name: 'MacBook Air M2',
-    category: 'macbook',
-    subcategory: null,
-    price: 899000,
-    description: 'MacBook Air con chip M2, increíblemente delgado y ligero',
-    storage: '256GB',
-    color: 'Gris Espacial',
-    condition: 'Como nuevo',
-    image_url: '/images/macbooks/macbook-air-m2.jpg',
-    available: true,
-    created_at: '2024-01-10T10:00:00Z',
-    updated_at: '2024-01-10T10:00:00Z',
-  },
   // {
   //   id: '8',
   //   name: 'MacBook Pro 14"',
