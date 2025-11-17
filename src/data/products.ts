@@ -60,7 +60,7 @@ export const mockProducts: Product[] = [
     battery: '94%',
     color: 'Titanio Natural',
     condition: 'Como nuevo',
-    image_url: '/images/iphones/iphone14_pro.png',
+    image_url: '/images/iphones/IMG_4379.jpeg',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
