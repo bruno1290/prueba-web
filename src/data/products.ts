@@ -76,7 +76,7 @@ export const mockProducts: Product[] = [
     battery: '76%',
     color: 'Titanio Natural',
     condition: 'Buen estado',
-    image_url: '/images/iphones/IMG_4321.jpeg',
+    image_url: '/Users/brunonattino/Documents/prueba-web/public/images/iphones/iphone11.png',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
