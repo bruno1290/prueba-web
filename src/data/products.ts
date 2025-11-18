@@ -28,7 +28,7 @@ export const mockProducts: Product[] = [
     battery: '87%',
     color: 'Titanio Natural',
     condition: 'Como nuevo',
-    image_url: '/Users/brunonattino/Documents/prueba-web/public/images/iphones/iphone14promax.png',
+    image_url: '/images/iphones/iphone14promax.png',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
@@ -44,7 +44,7 @@ export const mockProducts: Product[] = [
     battery: '79%',
     color: 'Titanio Natural',
     condition: 'Buen Estado',
-    image_url: '/Users/brunonattino/Documents/prueba-web/public/images/iphones/iphone12promax.png',
+    image_url: '/images/iphones/iphone12promax.png',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
@@ -60,7 +60,7 @@ export const mockProducts: Product[] = [
     battery: '94%',
     color: 'Titanio Natural',
     condition: 'Como nuevo',
-    image_url: '/Users/brunonattino/Documents/prueba-web/public/images/macbooks/macbook m1.png',
+    image_url: '/images/macbooks/macbook m1.png',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
@@ -76,12 +76,11 @@ export const mockProducts: Product[] = [
     battery: '76%',
     color: 'Titanio Natural',
     condition: 'Buen estado',
-    image_url: '/Users/brunonattino/Documents/prueba-web/public/images/iphones/iphone11.png',
+    image_url: '/images/iphones/iphone11.png',
     available: true,
     created_at: '2024-01-15T10:00:00Z',
     updated_at: '2024-01-15T10:00:00Z',
   },
-
 
 
 
